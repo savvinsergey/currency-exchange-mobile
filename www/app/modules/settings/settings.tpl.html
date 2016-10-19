@@ -1,0 +1,40 @@
+<ion-view id="settings-container" view-title="Currency rate">
+    <ion-content class="padding">
+        <form name="settings">
+            <div class="list">
+                <h3>Limits for USD</h3>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Lower limit for USD</span>
+                    <input type="number" placeholder="Lower limit for USD"
+                           ng-model="SettingsVm.limits.usd.down">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Upper limit for USD</span>
+                    <input type="number" placeholder="Upper limit for USD"
+                           ng-model="SettingsVm.limits.usd.up">
+                </label>
+                <button class="button button-block button-positive"
+                        ng-click="SettingsVm.saveLimits('usd',SettingsVm.limits.usd)">
+                    Save limits for USD
+                </button>
+            </div>
+            <div class="list">
+                <h3>Limits for EURO</h3>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Lower limit for EURO</span>
+                    <input type="number" placeholder="Lower limit for EURO"
+                           ng-model="SettingsVm.limits.eur.down">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Upper limit for EURO</span>
+                    <input type="number" placeholder="Upper limit for EURO"
+                           ng-model="SettingsVm.limits.eur.up">
+                </label>
+                <button class="button button-block button-positive"
+                        ng-click="SettingsVm.saveLimits('eur',SettingsVm.limits.eur)">
+                    Save limits for EURO
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

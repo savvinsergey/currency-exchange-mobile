@@ -1,0 +1,40 @@
+<ion-view id="currency-container" view-title="Currency rate" ng-init="CurrencyVm.initialize()">
+    <ion-content scroll="false">
+        <ion-slides slider="slider">
+            <ion-slide-page>
+                <div class="box"
+                     ng-if="CurrencyVm.currency.usd.rate">
+                    <span class="delta" ng-class="CurrencyVm.currency.usd.isIncrease ? 'increase' : 'decrease'">
+                        <i class="icon" ng-class="CurrencyVm.currency.usd.isIncrease ? 'ion-arrow-up-c' : 'ion-arrow-down-c'"></i>
+                        <i class="icon" ng-class="CurrencyVm.currency.usd.isIncrease ? 'ion-plus-round' : 'ion-minus-round'"></i>
+                        {{CurrencyVm.currency.usd.delta}}
+                    </span>
+                    <h1 class="currency-rate" ng-class="CurrencyVm.currency.usd.isIncrease ? 'increase' : 'decrease'">
+                        <span class="icon ion-social-usd">1 = </span> {{CurrencyVm.currency.usd.rate}}
+                    </h1>
+                    <div class="last-update">
+                        Last update: {{CurrencyVm.currency.usd.lastUpdate}}
+                        <a href="#" ng-click="CurrencyVm.doRefresh()"><i class="icon ion-refresh"></i></a>
+                    </div>
+                </div>
+            </ion-slide-page>
+            <ion-slide-page>
+                <div class="box"
+                     ng-if="CurrencyVm.currency.eur.rate">
+                    <span class="delta" ng-class="CurrencyVm.currency.eur.isIncrease ? 'increase' : 'decrease'">
+                        <i class="icon" ng-class="CurrencyVm.currency.eur.isIncrease ? 'ion-arrow-up-c' : 'ion-arrow-down-c'"></i>
+                        <i class="icon" ng-class="CurrencyVm.currency.eur.isIncrease ? 'ion-plus-round' : 'ion-minus-round'"></i>
+                        {{CurrencyVm.currency.eur.delta}}
+                    </span>
+                    <h1 class="currency-rate" ng-class="CurrencyVm.currency.eur.isIncrease ? 'increase' : 'decrease'">
+                        <span class="icon ion-social-euro">1 = </span> {{CurrencyVm.currency.eur.rate}}
+                    </h1>
+                    <div class="last-update">
+                        Last update: {{CurrencyVm.currency.eur.lastUpdate}}
+                        <a href="#" ng-click="CurrencyVm.doRefresh()"><i class="icon ion-refresh"></i></a>
+                    </div>
+                </div>
+            </ion-slide-page>
+        </ion-slides>
+    </ion-content>
+</ion-view>

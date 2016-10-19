@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+
+    <script src="cordova.js"></script>
+
+  </head>
+  <body ng-app="currencyApp">
+
+    <ion-nav-bar class="bar-dark">
+    </ion-nav-bar>
+
+    <ion-nav-view></ion-nav-view>
+
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+
+    <script src="app/modules/currency/currency.mdl.js"></script>
+    <script src="app/modules/currency/currency.svc.js"></script>
+    <script src="app/modules/currency/currency.ctrl.js"></script>
+
+    <script src="app/modules/settings/settings.mdl.js"></script>
+    <script src="app/modules/settings/settings.ctrl.js"></script>
+  </body>
+</html>
